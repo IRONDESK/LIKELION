@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form복습</title>
+</head>
+<body>
+    <form action="./007.html" method="get">
+        <label for="one">이름 : </label>
+        <input type="text" name="id" id="one">
+        <label for="two">패스워드 : </label>
+        <input type="password" name="pw" id="two">
+        <button type="submit">로그인</button><br>
+    </form>
+    <!-- form으로 묶인 태그들 중 input들의 data를 submit이라는 type의 button을 눌렀을 때
+        action이 가리키는 파일에 get이라는 method로 던져준다
+    
+    id는 각각을 연결해줌 label[for="a"] === input[id="a"] 연결-->
+
+    <form action="./007.html" method="get">
+        <label for="id">아이디</label>
+        <input type="text" name="아이디" id="id"><br>
+        <label for="pw">패스워드</label>
+        <input type="password" name="패스워드" id="pw"><br>
+    <label for="male">남</label>
+    <input type="radio" name="성별" id="male" value="남">
+    <label for="female">여</label>
+    <input type="radio" name="성별" id="female" value="여">
+
+    <p>좋아하는 프로그래밍 언어</p>
+    <input type="checkbox" name="언어" id="python" value="Python">
+    <label for="python">Python</label>
+    <input type="checkbox" name="언어" id="java" value="JavaScript">
+    <label for="java">JavaScript</label>
+    <input type="checkbox" name="언어" id="clang" value="Clang">
+    <label for="clang">C</label>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
