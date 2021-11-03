@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+            width: 20%
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .구분 {
+            width: 10%;
+        }
+
+        .가격 {
+            width: 20%;
+        }
+
+        .이름 {
+            width: 30%;
+        }
+
+        .판매량 {
+            width: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>
+            테이블 제목입니다...
+        </caption>
+        <!-- COL GROUP 묶기 -->
+        <colgroup>
+            <col class="구분">
+            <col class="이름">
+            <col class="가격">
+            <col class="판매량">
+        </colgroup>
+        <!-- TableHEAD -->
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>도서명</th>
+                <th>가격</th>
+                <th>판매량</th>
+            </tr>
+        </thead>
+        <!-- TableBODY -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Hello</td>
+                <td>1,000</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Apple</td>
+                <td>2,000</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Romeo</td>
+                <td>4,000</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+        <!-- TableFOOT -->
+        <tfoot>
+            <tr>
+                <td colspan="3">총계</td>
+                <td>6</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

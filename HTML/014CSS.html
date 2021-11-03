@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS STUDY</title>
+
+    <style>
+        .one{
+            color: aqua;
+        }
+        .two{
+            border: 1px solid black;
+        }
+        .three{
+            font-size: 49px;
+        }
+
+        #one{
+            color: aqua;
+        }
+        #two{
+            border: 1px solid black;
+        }
+        #three{
+            font-size: 49px;
+        }
+        ul p {
+            color: red;
+        }
+    </style>
+</head>
+<!--
+    1. class는 중첩해서 사용할 수 있으나, id는 중첩 사용이 불가
+    2. page 내 class는 여러개 존재할 수 있으나, id는 유일하게 존재해야 함 -->
+<body>
+    <h1>hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis ducimus recusandae, praesentium impedit
+        mollitia reiciendis modi vero eligendi hic delectus nihil maiores totam. Perspiciatis ratione magni distinctio
+        quas culpa!</p>
+
+    <h1><a href="#one">hello world</a></h1>
+    <h1>hello world</h1>
+    <h1 class="one">hello world</h1>
+    <h1 class="two three">hello world</h1><!-- 중첩 가능 -->
+    <h1>hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum alias laboriosam, voluptas sit ab ducimus similique omnis error placeat vero exercitationem minima cupiditate facilis nesciunt dolore ullam cum impedit odio?
+    Hic consequuntur eum ullam eligendi tempora. Autem eaque voluptates fuga voluptate rerum exercitationem, obcaecati dolores ea odit reprehenderit necessitatibus consequuntur sunt, sed reiciendis, voluptatum veniam nobis mollitia? Tempore, ducimus molestias. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, amet vel obcaecati porro voluptas distinctio iusto voluptatem dolore sit sequi laboriosam? Ut totam maiores earum tenetur at dolores commodi dolore?
+    Mollitia eos qui aspernatur fugiat atque magni modi saepe. Commodi reprehenderit perspiciatis laborum sit. Quidem excepturi doloremque, ea aperiam nemo in debitis soluta officiis voluptates? Enim ut voluptates similique rerum.
+    Illum, quasi dolor modi numquam maiores sit earum ut at exercitationem porro nisi itaque velit voluptate assumenda officiis laboriosam? Accusamus voluptatibus non dicta repellendus a quis id officiis cumque beatae.
+    Aliquid odio dolore temporibus dicta optio rerum voluptatem nostrum. Architecto quasi dolorem, autem sapiente numquam voluptatibus excepturi magnam accusamus praesentium, ab et voluptatem. Placeat quidem eligendi amet sapiente atque dolorum!
+    Labore neque, repellat dolorum ea deleniti, dolor ipsa saepe ab distinctio voluptates consequatur maxime, eius ratione recusandae odio? Eius, fugiat aspernatur doloremque atque debitis totam veniam voluptatum aut nihil assumenda!
+    Quidem nostrum et vel ut? Expedita aliquam est accusantium vitae ex minima sunt similique nihil quod quos eius debitis tenetur iste cum iure accusamus illum aspernatur, alias natus eveniet unde.</p>
+<hr>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1 id="one">hello world</h1>
+    <h1 id="two three">hello world</h1> <!-- 중첩 불가 -->
+    <h1>hello world</h1>
+
+    <ul>
+        <li><p>hello</p></li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+
+    <div>
+        <div>
+            <div>
+                <div>
+                    <p>hello world</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
