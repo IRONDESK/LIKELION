@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-size</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        .font {
+            font-family : 'Poppins', sans-serif;
+            font-size: 2em;
+        }
+
+        .weight-normal {
+            font-weight: normal;
+        }
+
+        .weight-bold {
+            font-weight: bold;
+        }
+
+        .weight-100 {
+            font-weight: 100;
+        }
+        
+        .weight-900 {
+            font-weight: 900;
+        }
+        
+        /* opacity */
+        .box{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .box-opacity1 {
+            top: 200px;
+        }
+        .box-opacity2 {
+            top: 400px;
+            opacity: 0.5;
+        }
+        .box-opacity3 {
+            top: 600px;
+            opacity: 0.2;
+        }
+        i{
+            font-size: 4.7em;
+        }
+    </style>
+</head>
+<body>
+    <div class="font">
+        <p class="weight-normal">font-weight normal</p>
+        <p class="weight-bold">font-weight bold</p>
+        <p class="weight-100">font-weight 100</p>
+        <p class="weight-900">font-weight 900</p>
+    </div>
+
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-address-book"></i>
+
+    <i class="fas fa-heart"></i><br>
+    <i class="fas fa-heart"></i><br>
+    <i class="fas fa-heart"></i><br>
+    <i class="fas fa-heart"></i>
+    <div class="box box-opacity1"></div>
+    <div class="box box-opacity2"></div>
+    <div class="box box-opacity3"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /* Box Size */
+        .one {
+            border: 100px solid black;
+            padding: 50px;
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        /* Border, Radius */
+        div[class*='c'] {
+            margin: 10px;
+        }
+
+        .c1 {
+            border: 1px solid red;
+        }
+
+        .c2 {
+            border: thick solid green;
+        }
+
+        .c3 {
+            border: thin dotted blue;
+        }
+
+        .c4 {
+            border: 3px double black;
+        }
+
+        /* Ryan 만들기 */
+        .Ryan {
+            text-align: center;
+        }
+
+        .earLeft {
+            margin-bottom: -110px;
+            margin-right: 35px;
+            display: inline-block;
+            width: 140px;
+            height: 130px;
+            border: 15px solid black;
+            border-bottom: none;
+            background: #DB9A2B;
+            border-top-left-radius: 150px;
+            border-top-right-radius: 120px;
+            transform: rotate(-25deg);
+        }
+
+        .earRight {
+            margin-bottom: -110px;
+            margin-left: 35px;
+            display: inline-block;
+            width: 140px;
+            height: 130px;
+            border: 15px solid black;
+            border-bottom: none;
+            background: #DB9A2B;
+            border-top-right-radius: 150px;
+            border-top-left-radius: 120px;
+            transform: rotate(25deg);
+        }
+
+        .head {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 450px;
+            height: 450px;
+            border: 15px solid black;
+            background: #DB9A2B;
+            border-radius: 290px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">Lorem ipsum dolor sit, Veritatis accusantium similique </div>
+    <div class="two">Lorem ipsum dolor sit, Veritatis accusantium similique</div>
+
+    <!-- Border, Radius -->
+    <div class="c1">
+        <p>hello</p>
+    </div>
+    <div class="c2">
+        <p>hello</p>
+    </div>
+    <div class="c3">
+        <p>hello</p>
+    </div>
+    <div class="c4">
+        <p>hello</p>
+    </div>
+
+    <!-- 라이언 만들기 -->
+    <div class="Ryan">
+        <div class="earLeft"></div>
+        <div class="earRight"></div>
+        <div class="head"></div>
+    </div>
+</body>
+
+</html>
