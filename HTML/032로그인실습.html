@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        section,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .login_wrap {
+            padding: 16px 16px 12px 17px;
+            width: 350px;
+            height: 120px;
+            background-color: #f7f9fa;
+            border: 1px solid #dae1e6;
+        }
+        .login_wrap::after{
+            /* 가상요소를 만들어 .find와 .join의 float을 해제합니다. */
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .loginMsg {
+            color: grey;
+            font-size: 0.86em;
+            letter-spacing: -0.3px;
+        }
+
+        .loginBtn {
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 48px;
+            font-size: 14px;
+            margin-top: 11px;
+            width: 100%;
+            height: 48px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #19ce60;
+            border: 1px solid #15c654;
+            color: #fff;
+        }
+        .loginBtn > img {
+            width: 60px;
+        }
+
+
+        .loginInf {
+            margin-top: 12px;
+            clear: both;
+        }
+        .loginInf a {
+            color: #444444;
+            font-size: 12px;
+            letter-spacing: -0.3px;
+            text-decoration: none;
+        }
+
+        .loginLeft {
+            float: left;
+            color: rgb(218, 218, 218);
+        }
+        .loginRight {
+            float: right;
+        }
+        .loginLeft img, .loginRight img {
+            vertical-align: middle;
+            width: 11px;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="login_wrap">
+        <p class="loginMsg">네이버를 더 안전하고 편리하게 이용하세요</p>
+        <a class="loginBtn">
+            <img src="./img/title.png" alt="NAVER"> 로그인
+        </a>
+        <div class="loginInf">
+            <div class="loginLeft">
+                <img src="./img/lock.png" alt="User"><a href="#">아이디</a> • <a href="#">비밀번호 찾기</a>
+            </div>
+            <div class="loginRight">
+                <a href="#"><img src="./img/user.png" alt="Join">회원가입</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

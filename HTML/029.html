@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documet</title>
+    <style>
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            height: 100px;
+            background: pink;
+        }
+
+        li:nth-child(2) {
+            width: 100px;
+            float: left;
+            /* float 속성을 주면, inline처럼 넓이 값이 사라짐. 따로 줘야 함.*/
+            background: royalblue;
+        }
+
+        li:nth-child(3) {
+            clear: left;
+            /*자식 형제들이 서로의 float 상황을 알게 해주는 속성 */
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>
