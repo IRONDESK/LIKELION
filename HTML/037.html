@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        ul {
+            display: flex;
+            align-items: flex-end;
+            height: 100vh;
+        }
+
+        li {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border: 1px solid black;
+        }
+
+        .no1 {
+            order: 2;
+        }
+/*
+        .no2 {
+            order: 3;
+        }
+
+        .no3 {
+            order: 4;
+        }
+
+        .no4 {
+            order: 2;
+        }
+*/
+        .no5 {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="no1">1</li>
+        <li class="no2">2</li>
+        <li class="no3">3</li>
+        <li class="no4">4</li>
+        <li class="no5">5</li>
+    </ul>
+</body>
+
+</html>
