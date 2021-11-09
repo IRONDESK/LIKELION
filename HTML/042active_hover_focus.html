@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover active focus</title>
+</head>
+<style>
+    /*  active  */
+    .one {
+        background-color: aquamarine;
+        width: 200px;
+        height: 120px;
+        transition: all 0.5s;
+    }
+
+    .one:hover {
+        background: deepskyblue;
+        width: 210px;
+        height: 130px;
+    }
+
+    /*  active  */
+    .btn {
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        background-color: palevioletred;
+        border: 4px solid palevioletred;
+        border-radius: 12px;
+        font-size: 20px;
+        padding: 7px 12px;
+        transition: all .3s;
+    }
+
+    .btn:active {
+        border-color: purple;
+        background-color: purple;
+    }
+
+    /*  focus  */
+    .box {
+        padding: 20px;
+        width: 150px;
+        height: 13px;
+        font-size: 15px;
+        border-radius: 23px;
+        border: 3px solid coral;
+        transition: all .2s;
+    }
+
+    .box:focus {
+        color: black;
+        background-color: rgba(255, 127, 80, 0.2);
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="one"></div>
+    <input type="text" class="box" placeholder="Click!">
+    <button class="btn">Click Me!</button>
+</body>
+
+</html>

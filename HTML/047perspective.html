@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 70px;
+    }
+
+    .container {
+        width: 218px;
+        height: 350px;
+        perspective: 600px;
+    }
+
+    .container .item {
+        width: 218px;
+        height: 350px;
+        border: 1px solid #828282;
+        font-size: 35px;
+        backface-visibility: hidden;
+        transition: 1s;
+    }
+
+    .container .item.front {
+        background-image: url(gostop_back.gif);
+        position: absolute;
+        transform: rotateY(0deg);
+    }
+
+    .container:hover .item.front {
+        transform: rotateY(180deg);
+    }
+
+    .container .item.back {
+        background-image: url(gostop_head.gif);
+        transform: rotateY(-180deg);
+    }
+
+    .container:hover .item.back {
+        transform: rotateY(0deg);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item front"></div>
+        <div class="item back"></div>
+    </div>
+</body>
+
+</html>
