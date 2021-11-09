@@ -266,7 +266,7 @@ margin-inline-start: 0px;
     background-color: #000;
 }
 
-.cont-company .list-coInfo dd:last-child::after{ /* 맨마지막은 가운데 줄 없애기 */
+.cont-company .list-coInfo dd:last-child::after{ /*  맨마지막은 가운데 줄 없애기 */
     display: none;
 }
 
@@ -286,7 +286,7 @@ margin-left: 22px;
     width: 24px;
     height: 24px;
     font-size: 1px;
-    text-indent: -9999px; /* 텍스트만 안보이게 */
+    text-indent: -9999px; /*   텍스트만 안보이게   */
     overflow: hidden;
 }
 
