@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .btn {
+            width: 200px;
+            height: 70px;
+            font-size: 30px;
+        }
+
+        .btn-close {
+            background-color: #000;
+            color: #fff;
+            border: 3px dotted #fff;
+        }
+
+        #main .btn2{
+            width: 300px;
+            padding: 20px 10px;
+            margin: 10px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        #main .general{
+            background-color: aquamarine;
+            color: #000;
+        }
+        #main .warning{
+            background-color: lightcoral;
+            color: #fff
+        }
+
+        /* smacss 모듈 - subclass*/
+        .smacss .btn3{
+            display: inline-block;
+            width: 300px;
+            padding: 20px 10px;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: rebeccapurple;
+            color: #fff;
+            text-align: center;
+        }
+        .btn3.btn-small{
+            width: 80px;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .btn3.btn-long{
+            width: 160px;
+        }
+
+        /* smacss state */
+        .tabnav{
+            display: flex;
+        }
+
+        .tabnav li{
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        .tabnav li:first-child{
+            border-left: 1px solid black;
+        }
+        .tabnav li a{
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+
+        .is-active{
+            background-color: blanchedalmond;
+        }
+        .is-active a{
+            pointer-events: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn"></button>
+    <button type="button" class="btn btn-close"></button>
+
+    <main id="main">
+        <button type="button" class="btn2 general">기본 버튼</button>
+        <button type="button" class="btn2 warning">취소 버튼</button>
+    </main>
+
+    <div class="smacss">
+        <a href="#" class="btn3 btn-small btn-long">아이디/비밀번호 찾기</a>
+        <a href="#" class="btn3 btn-small">로그인</a>
+    </div>
+
+
+    <ul class="tabnav">
+        <li><a href="#">탭1</a></li>
+        <li><a href="#">탭2</a></li>
+        <li><a href="#">탭3</a></li>
+        <li><a href="#">탭4</a></li>
+    </ul>
+</body>
+
+</html>
