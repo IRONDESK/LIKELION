@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d grid</title>
+    <style>
+        body{
+            background-color: #666;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+        }
+        .section-board {
+            margin: 0 auto;
+            display: grid;
+            gap: 23px;
+            grid-template-columns: repeat(4, 1fr);
+            transform: rotateX(60deg) rotateY(-10deg) rotateZ(50deg);
+        }
+
+        .board-item {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            transition: all .3s;
+        }
+        .board-item:hover {
+            top: -8px;
+            left: -10px;
+        }
+
+        /* 그림자 */
+        .board-item::after{
+            z-index: -1;
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #444;
+            width: 100px;
+            height: 100px;
+            transition: all .3s;
+        }
+        .board-item:hover::after{
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 20px;
+        }
+        
+        .board-item:nth-child(3n) {
+            background-color: lightcoral;
+        }
+        .board-item:nth-child(3n-1) {
+            background-color: lightgreen;
+        }
+        .board-item:nth-child(3n-2) {
+            background-color: lightskyblue;
+        }
+
+        /* checkbox */
+        .board-item input{
+            display: none;
+        }
+        .board-item div{
+            display: none;
+        }
+        .board-item label{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        .board-item input:checked + label{
+            border: 7px solid #444;
+            box-sizing: border-box;
+        }
+        .board-item input:checked + label + .modal-1{
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            background-color: #666;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-board">
+        <div class="board-item">
+            <input type="checkbox" id="check-1">
+            <label for="check-1"></label>
+            <div class="modal-1">hello world</div>
+        </div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+    </section>
+</body>
+</html>
