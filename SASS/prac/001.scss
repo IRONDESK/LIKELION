@@ -1,0 +1,63 @@
+//색상
+$red: #ee4444;
+$black: #222;
+$bg-color: #3e5e9e;
+$link-color: red;
+$p-color: #282A36;
+
+//폰트사이즈
+$font-size: 12px 15px 19px;
+
+//폰트
+$base-font: 'Noto Sans KR', sans-serif;
+
+//폰트 웨이트
+$font-weig: ("regular": 400, "medium": 500, "bold": 700);
+
+$변수1 : 20px;
+$변수2 : 4px;
+
+// true == 1
+// false == 0
+// and == 곱
+// or == 합
+
+.line-test {
+    line-height: ($변수1 / $변수2)+px;
+}
+
+body {
+        background-color : $bg-color;
+        font-family : $base-font;
+}
+
+h1 {
+    color: $black;
+}
+
+p {
+    color: $black;
+}
+
+a {
+    color: $link-color;
+    font-size: nth($font-size, 2);
+    font-weight: map-get($font-weig, "bold");
+}
+
+
+
+//Scss
+$font-p : 15px; // 전역변수
+
+
+.info{
+	$line-normal : 1.34; // 지역변수
+	font-size : 15px;
+	line-height : $line-normal;
+	text-align : right;
+  //span{
+		//line-height : $line-normal; 지역변수의 적용받지 못함
+	//}
+}
+

@@ -1,0 +1,36 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@mixin font-st($size, $fam) {
+    font-size: $size;
+    font-family: $fam;
+}
+
+.card {
+    @include flex-center;
+    background: gray;
+}
+
+.aside {
+    @include flex-center;
+    @include font-st(12px, 'Pretendadrd');
+    background: white;
+    
+}
+
+.profile-user {
+    background-image: url("../assets/user.jpg");
+    background-size: cover;
+    background-position : 50% 50%;
+    border-radius: 50%;
+    width : 50px;
+    height : 50px;
+}
+
+.comment-user {
+    @extend .profile-user;
+    // 기존 class를 가져오는 것
+}
