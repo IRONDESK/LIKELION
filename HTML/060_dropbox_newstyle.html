@@ -10,6 +10,13 @@
         body {
             padding: 10px;
         }
+        h2 {
+            margin: 10px;
+        }
+        h3 { 
+            padding: 10px;
+            line-height: 24px;
+        }
 
         /* button */
         .btn-select {
@@ -17,7 +24,7 @@
             position: relative;
             width: 200px;
             height: 40px;
-            padding-left: 14px;
+            padding: 11px 30px 11px 14px;
             font-size: 12px;
             background: #FFFFFF;
             border: 1px solid #C4C4C4;
@@ -25,6 +32,12 @@
             box-sizing: border-box;
             text-align: left;
             z-index: 1;
+            transition: 0.3s all;
+            
+            /* 길어지면 말줄임 만들기 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .btn-select::after {
             position: absolute;
@@ -39,8 +52,11 @@
             right: 13px;
             transition: 0.3s all;
         }
-        .btn-select.on {
+        .btn-select.on,
+        .btn-select:focus,
+        .btn-select:hover {
             border: 1px solid #9B51E0;
+            outline: 3px solid #F8E4FF;
         }
 
         .btn-select.on::after {
@@ -52,6 +68,7 @@
             display: none;
         }
         .btn-select.on + .list-member {
+            position: absolute;
             display: block;
         }
         .list-member {
@@ -65,24 +82,22 @@
             border-radius: 10px;
         }
         .list-member li {
-            width: 100%;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 4px 8px;
         }
         .list-member li button {
             cursor: pointer;
             border: none;
             border-radius: 8px;
-            padding-left: 18px;
+            padding-left: 10px;
             background: none;
-            width: 184px;
-            height: 30px;
+            line-height: 30px;
+            width: 100%;
             text-align: left;
         }
-        .list-member button:hover {
+        .list-member button:hover,
+        .list-member button:focus {
             background: #F8E4FF;
+            outline: none;
         }
     </style>
 </head>
@@ -91,7 +106,7 @@
 
     <h2>셀렉트 박스 만들기</h2>
     <article class="cont-select">
-        <button class="btn-select">최애 프로그래밍 언어</button>
+        <button class="btn-select">최애 프로그래밍 언어를 마음대로 골라봐</button>
         <ul class="list-member">
             <li><button type="button">Python</button></li>
             <li><button type="button">Java</button></li>
@@ -100,6 +115,11 @@
             <li><button type="button">C/C++</button></li>
         </ul>
     </article>
+    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo placeat ducimus, odit rem vero architecto pariatur quod neque nesciunt saepe atque minima alias, natus eum odio officia iure, aliquam quibusdam.
+    Ea, ducimus velit? Quos quidem expedita, nihil sequi nemo voluptate nulla temporibus quisquam a voluptatem omnis suscipit reprehenderit fugit blanditiis eos eius alias deserunt tenetur vel sapiente? Delectus, sint recusandae!
+    Illum esse vitae enim beatae aspernatur voluptatibus minima non ratione sint eos impedit distinctio ipsum ipsam, perspiciatis earum corrupti nesciunt soluta. Dolor hic fuga ratione deserunt aliquam quidem veniam doloremque.
+    Facilis enim veritatis exercitationem soluta doloribus! Impedit consequuntur distinctio doloribus laborum quam. Repellendus laborum iusto consequatur nesciunt est eos saepe debitis quibusdam tempore molestias! Et, itaque ea. Beatae, ex cumque.
+    Ad excepturi quis pariatur cum sapiente enim eligendi vero, laudantium dolor minus aperiam, corporis perferendis nisi voluptas veritatis fugiat odio repellendus, esse reprehenderit ipsum blanditiis soluta quo tempore officia? At!</h3>
 
     <script>
         const btn = document.querySelector('.btn-select');
