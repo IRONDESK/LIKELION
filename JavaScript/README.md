@@ -109,8 +109,6 @@ for (let i = 0; i < 10; i++) {
 
 ## 함수
 ### 기본함수
- * **전달인자**(argument) : 3, 5
- * **매개변수**(parameter) : x, y  ``// 여기서 x, y를 보통 한국에서는 인자``
 ```js
 function add(x, y){
     return x + y;
@@ -118,7 +116,9 @@ function add(x, y){
 
 add(3, 5)
 ```
-
+ * **전달인자**(argument) : 3, 5
+ * **매개변수**(parameter) : x, y  ``// 여기서 x, y를 보통 한국에서는 인자``
+ * 
 ### 콜백함수
 ```js
 function add(x, y) {
