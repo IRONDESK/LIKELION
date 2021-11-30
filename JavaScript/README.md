@@ -178,12 +178,8 @@ if (true){
 console.log(what); // not defined error
 // 안에서 선언된 변수는 일종의 지역변수
 ```
-console.log(hojun);
-// 리터럴
 
 ## 정규표현식
-
-
 ```js
 prompt('hello?') // 'hi'
 comfirm() // VM188:1 Uncaught ReferenceError: comfirm is not defined
