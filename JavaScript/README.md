@@ -143,8 +143,10 @@ function add(x, y) {
 }
 
 let addArrow = (x, y) => x + y;
-- 익명함수 아님
-// 기명 함수
+```
+
+### 기명함수
+```js
 let aa = function sum(x, y) {
     return x + y
 }
@@ -155,6 +157,11 @@ let bb = function(x, y) {
 }
 // ES5에서는 빈 문자열이었는데 ES6에서 name 값을 가지는 것으로 바뀌었습니다.
 let cc = (x, y) => x + y;
+```
+
+### 익명함수
+```js
+console.dir(function (x, y) {return x + y;})
 ```
 
 ## 선언
@@ -180,6 +187,13 @@ console.log(what); // not defined error
 ```
 
 ## 정규표현식
+ * 텍스트의 특정 패턴을 찾아내는 목적
+ * https://regexr.com/5nvc2
+
+## 리터럴
+
+
+## 상호작용
 ```js
 prompt('hello?') // 'hi'
 comfirm() // VM188:1 Uncaught ReferenceError: comfirm is not defined
