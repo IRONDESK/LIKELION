@@ -119,7 +119,8 @@ function add(x, y){
 add(3, 5)
 ```
 
-- 콜백함수
+### 콜백함수
+```js
 function add(x, y) {
     return x + y;
 }
@@ -133,7 +134,10 @@ function cal(a, b){
 }
 
 cal(add, mul);
-- 화살표함수
+```
+
+### 화살표함수
+```js
 function add(x, y) {
     return x + y
 }
@@ -151,6 +155,7 @@ let bb = function(x, y) {
 }
 // ES5에서는 빈 문자열이었는데 ES6에서 name 값을 가지는 것으로 바뀌었습니다.
 let cc = (x, y) => x + y;
+```
 
 ## 선언
  * ``js let x`` : 변수로 사용하세요.
