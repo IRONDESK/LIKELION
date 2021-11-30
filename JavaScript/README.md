@@ -191,6 +191,11 @@ console.log(what); // not defined error
  * https://regexr.com/5nvc2
 
 ## 리터럴
+ * 리터럴은 코드에 보여지는 타입의 표현을 의미
+ * 원래 배열을 생성하려면 ``new Array(4,5,6);``로 작성해야 하나, ``[4,5,6]``로 표현하는 배열
+ * 마찬가지로 ``new Object()`` 의 리터럴 표현은 ``{}``
+ * ``new Number(5)``의 리터럴 표현은 ``5``
+ * ``new String("hello")``의 리터럴 표현은 ``"hello"``
 
 
 ## 상호작용
