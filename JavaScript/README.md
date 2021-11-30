@@ -1,28 +1,28 @@
 ## 변수(형, type)
 - **Array**(배열) 
-  * 형태 : ['하나', '둘', '셋'], [100, 200, 300],
-  * 호출 : 변수명, 변수명[0], 변수명[0][0] (변수명[index])
+  * 형태 : `['하나', '둘', '셋'], [100, 200, 300]`
+  * 호출 : `변수명, 변수명[0], 변수명[0][0] (변수명[index])`
 - **String**(문자열)
-  * 형태 : 'abcde', "abcde", abcde
-  * 호출 : 변수명, 변수명[0] (변수명[index])
+  * 형태 : `'abcde', "abcde",｀abcde｀`
+  * 호출 : `변수명, 변수명[0] (변수명[index])`
 - **Number**(숫자)
   * 형태 : 10, 10.123
   * 호출 : 변수명
+  * 일반적 숫자 뿐 아니라, `Infinity`, `-Infinitiy`, `NaN`이 '특수 숫자값'으로 포함됨.
 - **Boolean**(논리값)
-  * 형태 : true, false
+  * 형태 : `true`, `false`
   * 호출 : 변수명
 - **Object**(객체)
-  * 형태 : {
+  * 형태 : ``{
               "지역이름": "전국",
               "확진자수": 24889,
               "격리해제수": 23030,
               "사망자수": 438,
               "십만명당발생율": 48.0
-            }
-  * 호출 : 변수명, 변수명.지역이름, 변수명['지역이름'] (변수명.key, 변수명[key])
+            }``
+  * 호출 : `변수명`, `변수명.지역이름`, `변수명['지역이름']` (`변수명.key`, `변수명[key]`)
 - **undefine** : undefind
 - **null** : object
-- **NaN** : number
 
 ## 산술연산(+, -, /, *, , %)
 ## 논리연산(!, &&, ||)
@@ -108,15 +108,16 @@ for (let i = 0; i < 10; i++) {
 ```
 
 ## 함수
-- 함수
-// 여기서 x, y를 보통 한국에서는 인자
-// 전달인자(아규먼트, argument) : 3, 5
-// 매개변수(파라미터, parameter) : x, y
+### 기본함수
+ * **전달인자**(argument) : 3, 5
+ * **매개변수**(parameter) : x, y  ``// 여기서 x, y를 보통 한국에서는 인자``
+```js
 function add(x, y){
     return x + y;
 }
 
 add(3, 5)
+```
 
 - 콜백함수
 function add(x, y) {
@@ -152,9 +153,9 @@ let bb = function(x, y) {
 let cc = (x, y) => x + y;
 
 ## 선언
-let x : 변수로 사용하세요.
-var x (전역에서 사용할 변수값, 실무에서 되도록 사용X)
-const x (변하지 않는 상수값)
+ * ``js let x`` : 변수로 사용하세요.
+ * ``const x`` : 변하지 않는 상수값
+ * ``var x`` : 전역에서 사용할 변수값, **실무에서 되도록 사용하지 않을 것!**
 
 ## 전개표현식 사용
 ``` javascript
@@ -178,14 +179,9 @@ console.log(hojun);
 ## 정규표현식
 
 
-
-prompt('hello?')
-'hi'
-comfirm()
-VM188:1 Uncaught ReferenceError: comfirm is not defined
-    at <anonymous>:1:1
-(익명) @ VM188:1
-confirm('hi')
-true
-alert('hello')
-undefined
+```js
+prompt('hello?') // 'hi'
+comfirm() // VM188:1 Uncaught ReferenceError: comfirm is not defined
+confirm('hi')  // true
+alert('hello')  // undefined
+```
