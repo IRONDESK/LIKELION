@@ -217,3 +217,33 @@ comfirm() // VM188:1 Uncaught ReferenceError: comfirm is not defined
 confirm('hi')  // true
 alert('hello')  // undefined
 ```
+
+## new Date()
+ * **주의** : 월(month)는 0부터 시작. `1월 = 0, 2월 = 1`
+ ```js
+ let d = new Date();
+ d  // Wed Dec 01 2021 10:35:01 GMT+0900 (한국 표준시)
+d.getFullYear()  // 2021
+d.getMonth() // 11
+d.getDate()  // 1
+d.getDay()  // 3
+// 일요일부터 0
+
+d.getHours()  // 10
+d.getMinutes()  // 35
+d.getSeconds()  // 1
+d.getMinutes()  // 35
+
+```
+
+## Array
+
+```js
+let 과일 = ['사과', '수박', '복숭아', '딸기', '바나나']
+let 과일2 = new Array(5);
+let 과일3 = new Array('사과', '수박', '복숭아', '딸기', '바나나');
+
+과일[0] // '사과'
+과일[0] = '귤'
+과일 // ['귤', '수박', '복숭아', '딸기', '바나나']
+```
