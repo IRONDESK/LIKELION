@@ -50,6 +50,18 @@ a.forEach(e => console.log(e**2));
 
 ```
 
+ * (실습)**평균 계산하기**
+   * `parseInt()` : 문자를 숫자로 바꿔줌.
+```js
+let data = '3, 4, 10, 12, 16'.split(',')
+data // ['3', '4', '10', '12', '16']
+let 합계 = 0
+for (let i of data) {
+    합계 += parseInt(i);
+}
+console.log(합계/data.length)
+```
+
 ### while문
 ``` javascript
 let x = 0;
