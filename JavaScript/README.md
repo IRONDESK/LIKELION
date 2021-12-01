@@ -122,13 +122,24 @@ for (let i = 0; i < 10; i++) {
 
 ## 함수
 ### 기본함수
+ * **함수 선언문**
 ```js
 function add(x, y){
     return x + y;
 }
 
-add(3, 5)
+add(3, 5) // 8
 ```
+
+ * **함수 표현식**
+```js
+let add = function(x, y){
+    return x + y;
+}
+
+add(3, 5) // 8
+```
+
 |단어|번역|의미|상단 예시|
 |------|---|---|:---:|
 |parameter|매개변수|함수와 메서드 입력 변수(variable)의 이름|`x`, `y`
@@ -147,6 +158,8 @@ add(10);  // 210
 add();  // 300
 
 ```
+> 호이스팅은 자동적으로 자바스크립트 엔진이 읽어 올때 됩니다. 아래 2가지 차이가 크다고 할 수 있는데, 나중에 호이스팅이랑 클로저 배우시면 좀더 수월하실거 같네요. <br> <br>💡 **함수 선언문**으로 선언된 함수는 함수 호이스팅이 발생한다. 런타임 이전에 함수 객체가 생성이 되므로 함수가 정의되기 전에 함수를 호출할 수 있다.  미리 함수 호출해도 가능, 클로저 상황에 많이 사용. <br> <br>💡 **함수 표현식**으로 선언된 함수는 변수 호이스팅이 발생하며, undefined로 초기화된다. 그러므로 함수 표현식으로 선언한 함수는 함수가 정의되기 전에 함수를 호출할 수 없다.
+
 
 ### 콜백함수
 ```js
@@ -190,7 +203,10 @@ let cc = (x, y) => x + y;
 
 ### 익명함수
 ```js
-console.dir(function (x, y) {return x + y;})
+console.dir(function (a,b) {
+    return a+b
+    }
+    )
 ```
 
 ## 선언
@@ -343,4 +359,18 @@ Object.values(person) // ['이호준', 10, 30, 40, {첫번째직장: '하나', �
 * object의 key와 value를 array의 array로 묶어서 가져오기
 ```js
 Object.entries(person) // [['name', '이호준'], ['age', 10], ... , ['이력': {첫번째직장: '하나', 두번째직장: '둘'}]]
+```
+
+* (실습)**object 출력**
+```js
+for (const [key, value] of Object.entries(person)) {
+  console.log(`${key}: ${value}`);
+}
+
+///
+name: 이호준
+age: 10
+height: 30
+weight: 40
+이력: [object Object]
 ```
