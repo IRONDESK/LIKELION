@@ -343,6 +343,11 @@ let person = {
 이력 : {'첫번째직장' : '하나', '두번째직장' : '둘'}
 }
 ```
+ - object 값 불러오는 방법
+   * ``person.name // '이호준' ``
+   * ``person['name'] // '이호준' ``
+   * ``person.이력.첫번째직장 // '하나'``
+   * ``person['이력']['첫번째직장'] // '하나'``
 
 ### Object.keys(), .values(), .entries()
 
