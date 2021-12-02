@@ -186,6 +186,8 @@ function add(x, y) {
 
 let addArrow = (x, y) => x + y;
 ```
+
+#### map()
 ```js
 let array = [1, 4, 9, 16];
 
@@ -237,6 +239,22 @@ let data = [{
 data.map(x => x.중간고사점수)  // [55, 60, 30, 20, 100]
 data.map(x => x.중간고사점수 * 3)  // [165, 180, 90, 60, 300]
 data.map(x => [x.이름, x.중간고사점수])  // [['Jimin', 55], ['Jungkook', 60], ... ['Jay', 100]]
+
+let s = 0;
+data.map(x => x.중간고사점수).forEach(y => s += y)
+```
+
+#### filter()
+```js
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter(word => word.length > 6);  // 6글자를 초과
+console.log(result);  // ['exuberant', 'destruction', 'present']
+```
+
+```js
+let number = [2, 6, 5, 4, 8, 5, 4, 3, 2, 9]
+const result = number.filter(i => i > 5);
+console.log(result);  // [6, 8, 9]
 ```
 
 ### 기명함수
@@ -492,6 +510,8 @@ data.sort((a,b) => a-b) // 오름차순 [10, 11, 20, 22, 25, 30, 111]
 data.sort((a,b) => b-a) // 내림차순 [111, 30, 25, 22, 20, 11, 10]
 ```
 
+
+
 ## Object
 ```js
 let person = {
@@ -539,3 +559,4 @@ height: 30
 weight: 40
 이력: [object Object]
 ```
+
