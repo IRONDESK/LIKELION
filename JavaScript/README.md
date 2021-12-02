@@ -246,6 +246,22 @@ function sigma(n){
 // 따라서 sigma(5) = 15
 ```
 
+```js
+function reverse(text) {
+    text += ''
+    if(text.length <= 1) {
+        return text
+    }
+    return reverse(text.slice(1)) + text[0] // .slice(n) n번째부터 끝까지의 문자열 + 0번째 문자열
+}
+
+// reverse('hello') == reverse('ello') + 'h' == 'olle' + 'h'
+// reverse('ello') == reverse('llo') + 'e' == 'oll' + 'e'
+// reverse('llo') == reverse('lo') + 'l' == 'ol' + 'l'
+// reverse('lo') == reverse('o') + 'l' == 'o' + 'l'
+// reverse('o') == 'o'
+```
+
 ## 선언
  * ``js let x`` : 변수로 사용하세요.
  * ``const x`` : 변하지 않는 상수값
