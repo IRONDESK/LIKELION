@@ -209,6 +209,43 @@ console.dir(function (a,b) {
     )
 ```
 
+### 재귀함수
+ - 종료 조건 체크
+ - 반복문으로 구현 가능한 것은 재귀함수로 모두 구현 가능하나, 재귀함수로 구현 가능한 것은 반복문으로 대부분 구현 가능
+```js
+function factorial(n){
+    if(n <= 1) {
+        return n
+    }
+    return n * factorial(n-1)  // 재귀함수, 자기가 자기 함수를 불러옴
+}
+
+// factorial(5) == 5 * factorial(4) == 5 * 24
+// factorial(4) == 4 * factorial(3) == 4 * 6
+// factorial(3) == 3 * factorial(2) == 3 * 2
+// factorial(2) == 2 * factorial(1) == 2 * 1
+// factorial(1) == 1
+
+// 따라서 factorial(5) == 120
+```
+
+```js
+function sigma(n){
+    if(n <= 1) {
+        return n
+    }
+    return n + sigma(n-1)  // 재귀함수, 자기가 자기 함수를 불러옴
+}
+
+// sigma(5) == 5 + sigma(4) == 5 + 10
+// sigma(4) == 4 + sigma(3) == 4 + 6
+// sigma(3) == 3 + sigma(2) == 3 + 3
+// sigma(2) == 2 + sigma(1) == 2 + 1
+// sigma(1) == 1
+
+// 따라서 sigma(5) = 15
+```
+
 ## 선언
  * ``js let x`` : 변수로 사용하세요.
  * ``const x`` : 변하지 않는 상수값
