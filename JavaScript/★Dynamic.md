@@ -58,3 +58,5 @@ function myFunction(){
             // {key: value}에서 value가 함수면 key는 함수명
 }
 ```
+
+## DOM
