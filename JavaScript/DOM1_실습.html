@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM TEST</title>
+</head>
+<style>
+    .container {
+        margin: 0 auto;
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container.btn {
+        padding-top: 20px;
+    }
+
+    .btn button {
+        cursor: pointer;
+        border: none;
+        padding: 7px 18px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .btn button:hover {
+        background-color: #999;
+        color: #111;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: silver;
+        border-radius: 100%;
+        transition: all .4s;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+
+    .green {
+        background-color: green;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <div class="container btn">
+        <button class="red-button">빨강</button>
+        <button class="yellow-button">노랑</button>
+        <button class="green-button">초록</button>
+    </div>
+    <script>
+        const box = document.querySelector('.box');
+
+        /// const redBtn = document.querySelector('.red-button');
+        /// const yellowBtn = document.querySelector('.yellow-button');
+        /// const greenBtn = document.querySelector('.green-button');
+        /// let btnArray = [redBtn, yellowBtn, greenBtn];
+        /// 리팩토링 공통 btn을 array로 묶어내기
+        const btnArray = document.querySelectorAll('.btn button'); 
+
+        // redBtn.addEventListener('click', function () {
+        //     // box.classList.toggle('red'); toggle은 True/False로 변경
+        //     box.classList.remove('yellow', 'green');
+        //     box.classList.add('red');
+        // });
+        // yellowBtn.addEventListener('click', function () {
+        //     // box.classList.toggle('yellow');
+        //     box.classList.remove('red', 'green');
+        //     box.classList.add('yellow');
+        // });
+        // greenBtn.addEventListener('click', function () {
+        //     // box.classList.toggle('green');
+        //     box.classList.remove('yellow', 'red');
+        //     box.classList.add('green');
+        // });
+        
+        ////// 리팩토링
+        btnArray.forEach(item => {
+            item.addEventListener('click', function () {
+                // box.classList.toggle('red'); toggle은 True/False로 변경
+                box.classList.remove('red', 'yellow', 'green');
+                // 색깔별 설정
+                if (item.className === 'red-button') {
+                    box.classList.add('red');
+                } else if (item.className === 'yellow-button') {
+                    box.classList.add('yellow');
+                } else {
+                    box.classList.add('green');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
