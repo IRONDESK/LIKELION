@@ -193,3 +193,47 @@ a(); // 1
  * 결론
    -  변수는 함수 내부에서 선언해야 함!
    -  f(b)의 xx는 f(a)의 xx를 가르키고 있음
+
+
+## get, set
+```js
+let user = {
+    name: 'John',
+    surname: 'Smith',
+
+    get fullName() {
+        return `${this.name} ${this.surname}`;
+    },
+
+    set fullNameSet(value) {
+        [this.name, this.surname] = value.split(" ");
+    }
+};
+
+
+user.fullNameSet = "Soochul Son";
+
+console.log(user.name) // Soochul
+console.log(user.surname) // Son
+user.fullName // Soochul Son
+```
+ * get : object의 property를 메서드나 함수 등으로 불러오기 위해
+ * set : object를 만들기 위해
+
+
+## class, prototype
+ * **객체지향 개발의 핵심**
+```js
+function 기계(구멍1, 구멍2){
+    this.q = 구멍1;
+    this.w = 구멍2;
+// 새로운 object를 {q: 구멍1, w: 구멍2} 만들라는 뜻. 구멍1과 구멍2는 parameter
+}
+
+var nunu = new 기계();
+nunu  // 기계 {q: 'consume', w: 'snowball'}
+var garen = new 기계();
+garen // 기계 {q: 'consume', w: 'snowball'}
+```
+ * this : 함수로부터 생성되는 object. 같은 말로 ``instance``라고 함.
+
