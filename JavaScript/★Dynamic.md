@@ -240,6 +240,7 @@ garen //  기계 {q: 'strike', w: 'fire'}
 
 ### class
  * ES6 이후로 새롭게 등장한 문법
+ * class의 이름은 **대문자**로 시작하는 것이 국룰
 ```js
 class Hero {
     constructor(구멍1, 구멍2){
@@ -254,3 +255,16 @@ var garen1 = new Hero('strike', 'fire');
 nunu1 //  Hero {q: 'consume', w: 'snowball'}
 garen1 //  Hero {q: 'strike', w: 'fire'}
 ```
+
+#### ‼️ forEach와 map의 차이점
+```js
+let fortest = [1,2,3,4].forEach(x=> x**2)
+let maptest = [1,2,3,4].map(x=> x**2)
+
+fortest // undefined
+maptest // [1, 4, 9, 16]
+```
+ * ``forEach()``는 순회만 할 뿐 return을 하지 않음 (``undefined``)
+ * ``map()``은 순회하고 return을 함
+
+### prototype
