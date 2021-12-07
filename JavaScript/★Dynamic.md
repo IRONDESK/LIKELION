@@ -268,3 +268,17 @@ maptest // [1, 4, 9, 16]
  * ``map()``은 순회하고 return을 함
 
 ### prototype
+ > prototype은 **유전자** 같은 것이다. ─ 애플코딩
+```js
+function 기계(구멍1, 구멍2){
+    this.q = 구멍1;
+    this.w = 구멍2;
+}
+
+기계.prototype //  {constructor: function 기계}
+
+기계.prototype.name = 'kim'
+nunu.name  // 'kim'
+nunu  // 기계 {q: 'consume', w: undefined}
+```
+ * 부모 함수나 클래스에 prototype으로 부여되면, 자식 object도 동일한 key, value를 갖게 됨. 다만 자식 object를 직접 호출할 때는 보이지 않음. (부모에게 있는 것이기 때문에)
