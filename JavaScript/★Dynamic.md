@@ -222,18 +222,35 @@ user.fullName // Soochul Son
 
 
 ## class, prototype
- * **객체지향 개발의 핵심**
+### 객체지향 개발
 ```js
 function 기계(구멍1, 구멍2){
     this.q = 구멍1;
     this.w = 구멍2;
-// 새로운 object를 {q: 구멍1, w: 구멍2} 만들라는 뜻. 구멍1과 구멍2는 parameter
+// 새로운 object를 {q: 구멍1, w: 구멍2} 만들라는 뜻. 구멍1과 구멍2는 parameter.
 }
 
-var nunu = new 기계();
-nunu  // 기계 {q: 'consume', w: 'snowball'}
-var garen = new 기계();
-garen // 기계 {q: 'consume', w: 'snowball'}
-```
- * this : 함수로부터 생성되는 object. 같은 말로 ``instance``라고 함.
+var nunu = new 기계('consume','snowball');
+var garen = new 기계('strike', 'fire');
 
+nunu  //  기계 {q: 'consume', w: 'snowball'}
+garen //  기계 {q: 'strike', w: 'fire'}
+```
+ * this : 함수로부터 생성되는 object. 이 결과물을 ``instance``라고 함.
+
+### class
+ * ES6 이후로 새롭게 등장한 문법
+```js
+class Hero {
+    constructor(구멍1, 구멍2){
+        this.q = 구멍1;
+        this.w = 구멍2;
+    }
+}
+
+var nunu1 = new Hero('consume', 'snowball');
+var garen1 = new Hero('strike', 'fire');
+
+nunu1 //  Hero {q: 'consume', w: 'snowball'}
+garen1 //  Hero {q: 'strike', w: 'fire'}
+```
