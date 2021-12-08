@@ -282,3 +282,16 @@ nunu.name  // 'kim'
 nunu  // 기계 {q: 'consume', w: undefined}
 ```
  * 부모 함수나 클래스에 prototype으로 부여되면, 자식 object도 동일한 key, value를 갖게 됨. 다만 자식 object를 직접 호출할 때는 보이지 않음. (부모에게 있는 것이기 때문에)
+
+## 에러 핸들링
+### try, catch, finally
+```js
+try {
+  alert( 'try 블록 시작' );
+  if (confirm('에러를 만드시겠습니까?')) 이상한_코드();
+} catch (e) {
+  alert( 'catch' );
+} finally {
+  alert( 'finally' );
+}
+```
