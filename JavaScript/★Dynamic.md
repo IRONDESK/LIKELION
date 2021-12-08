@@ -295,3 +295,27 @@ try {
   alert( 'finally' );
 }
 ```
+
+## Promise()
+ * 비동기적 실행
+   - '**동기적 실행**'은 순차적으로 실행되고, '**비동기적 실행**'은 실행되고 있는 중 다른 것을 실행한다.
+  
+ > 세탁기 돌리고 끝날 때까지 가만히 있으면 **동기적 실행**<br>세탁기 돌아가는 동안 잡일을 하면 **비동기적 실행**
+```js
+let promise = new Promise(function(resolve, reject) {
+  setTimeout(() => resolve("끝남!"), 3000);
+});
+// Promise가 만들어지면 executor 함수는 자동으로 실행됩니다.
+// 시간이 지나면 완료 신호가 전달되면서 result는 'done'이 됩니다.
+// 세탁기 비유로 따지면, setTimeout은 세탁기
+
+console.log('hello world');
+promise.then(v => console.log(v));
+console.log('hello world2');
+// 세탁기 비유로 따지면, 잡일
+
+
+// hello world
+// hello world2
+// 끝남!
+```
